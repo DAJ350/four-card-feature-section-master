@@ -14,20 +14,20 @@
     --charcoal: #4D4F62;
 }
 
-.card--red-lining .card__lining  {
-    background-color: var(--red);
+.card.card--red-lining   {
+    border-top-color: var(--red);
 }
 
-.card--turquoise-lining .card__lining {
-    background-color: var(--turquoise);
+.card.card--turquoise-lining  {
+    border-top-color: var(--turquoise);
 }
 
-.card--yellow-lining .card__lining {
-    background-color: var(--yellow);
+.card.card--yellow-lining  {
+    border-color: var(--yellow);
 }
 
-.card--blue-lining .card__lining {
-    background-color: var(--blue);
+.card.card--blue-lining  {
+    border-color: var(--blue);
 }
 
 /* Text Styles */
@@ -111,18 +111,20 @@ body {
 /* Cards Container */
 
 .cards-container {
-    height:;
-    width:;
-    margin-top: 4rem;
+    justify-content: center;
+    max-height: 33.125rem;
+    max-width: 77.083333333333333%;
+    margin: 4rem auto 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: ;
+    grid-template-rows: repeat(16, 1fr);
     gap: 0.75rem 1.875rem;
 }
 
 
 /* Card Component */
 .card {
+    border-top: solid 4px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -147,6 +149,32 @@ body {
     align-self: flex-end;
     margin-top: 4.37875rem;
 }
+
+
+/* Card Positioning */
+
+/*
+.card--supervisor {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 4;
+}
+
+.card--team-builder {
+    grid-column: 5 / span 4;
+}
+
+.card--karma {
+    grid-column: 5 / span 4;
+    grid-row: span 4 / 17 ;
+}
+
+.card--calculator {
+    grid-column: span 4 / 13;
+    grid-row: 3 / span 4;
+}
+
+
+*/
 
 /* Footer Section */
 .footer-section {

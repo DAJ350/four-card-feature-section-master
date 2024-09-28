@@ -1,91 +1,77 @@
-# Frontend Mentor - Four card feature section
+# Frontend Mentor - Four card feature section solution
 
-![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Thanks for checking out this front-end coding challenge.
+## Overview
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+### The challenge
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
-
-## The challenge
-
-Your challenge is to build out this feature section and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [GitHub Repository](https://github.com/DAJ350/four-card-feature-section-master)
+- Live Site URL: [GitHub Pages](https://daj350.github.io/four-card-feature-section-master/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+For this project, I firstly set off to learn the BEM naming convention in attempt to improve how organised and scalable my code is. This is a practice I intend to uphold moving forward. I then began editing the HTML document to add the semantic elements. 
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+Once I completed with the structuring of the page, I moved into creating the colour variables and typography classes. I then went on to creating the layout of the overall body of the page. I noticed that the design puts all of the content within the middle section of the page with equal gaps on either side. I could have achieved this look by using the margin property in the body element but I wanted to practice my use of grids. Bearing this in mind, I went ahead to create a main grid layout and set the main content to be positioned within the middle column.
 
-## Building your project
+I then started with styling the main content of the page. Creating the card component in a way that would allow for it to be reused or scaled if I was to return to this project in the future. 
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Built with
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- BEM 
 
-## Deploying your project
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+### What I learned
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+I learned a number of things while creating this page. Firstly I learned about using the BEM naming convention which is a great tool to creating better, readable, manageable and scalable code. 
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+I also revisited my knowledge of CSS Grids. I found the implementation of an accurate grid quite challenging as this is my first time actually putting it into practice. I found the most challenge in setting up the correct amount of rows and columns based on the design provided. After tinkering with it for a few hours, I finally learned a method I can use moving forward to easily figure out how many rows or columns I need in the grid in order to achieve the design. 
 
-## Create a custom `README.md`
+Method:
+Calculating Number of Required Columns:
+- Count how many columns there are within the entire layout starting from the left side of the layout moving to the right.
+- If counting a line inbetween a gutter, count both the line of the left side of the element and the line of the right side of the following element, as one column. 
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Calculating number of required rows (if found this one most difficult):
+- Starting for the top of the layout, count the number of horizontal lines there are. This count should include both the top line (border-top) of and element and the bottom line (border-bottom) of the element. 
+![Diagram](./grid-row-diagram.png)
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+I also was reminded during this project how using percentages are a great way to set the width or height of element if you want the size to scale with the total available space on the viewport. 
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Rems and Ems are great for adjusting properties that are text related. 
 
-## Submitting your solution
+### Useful resources
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+- [BEM Tutorial by Kevin Geary](https://youtu.be/tha_ynmZRaA?si=xf3Kf6DMM6OcC-NN) - This helped me learn the basics of BEM. He provides a solid example of what not to do and how to correctly use the BEM naming convention.
+- [Coder Coder Builds Building a Product Landing Page](https://youtu.be/ZiXkYiI7LoI?si=xLkE-YSHiLOcae0g) - Watching this video, I was inspired by how she used grid to construct the overall layout of the page. This is where I got the concept from to set up the overall layout of this project. 
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
 
-## Sharing your solution
+## Author
 
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- GitHub - [DAJ350](https://github.com/DAJ350)
+- Frontend Mentor - [@DAJ350](https://www.frontendmentor.io/profile/DAJ350)
